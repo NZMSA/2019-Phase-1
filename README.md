@@ -16,7 +16,7 @@ It is in your best interest to watch as many videos and upskill as much as you c
 
 These videos will be uploaded to our [YouTube](https://www.youtube.com/channel/UCCegNuS_AZjK-P3ZMN3JXNw) channel - Subscribe and turn on the notification bell to keep up to date. 
 
-You will be notified via email about how to submit, deadline confirmation and when the videos are uploaded ([Register here](https://www.aka.ms/registermsa) for communcations) and like our [Facebook page](https://www.aka.ms/nzmsa) to stay up to date.
+You will be notified via email about how to submit, deadline confirmation and when the videos are uploaded ([Register here](https://www.aka.ms/registermsa) for communications) and like our [Facebook page](https://www.aka.ms/nzmsa) to stay up to date.
 
 All the YouTube videos will have corresponding documentation on GitHub so "watch" the repository to find out immediately when we commit changes. 
 
