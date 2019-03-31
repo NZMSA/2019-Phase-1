@@ -18,6 +18,8 @@ These videos will be uploaded to our [YouTube](https://www.youtube.com/channel/U
 
 You will be notified via email about how to submit, deadline confirmation and when the videos are uploaded ([Register here](https://www.aka.ms/registermsa) for communications) and like our [Facebook page](https://www.aka.ms/nzmsa) to stay up to date.
 
+Sign up for Microsoft Azure for Students [(Documentation can be found here)](https://github.com/NZMSA/2019-Phase-1/tree/master/Azure%20For%20Students). Get $100 credit when you create your free account. There is no credit card needed and 12 months of free Azure services. Find out more information [here](https://azure.microsoft.com/en-us/free/students/)
+
 All the YouTube videos will have corresponding documentation on GitHub so "watch" the repository to find out immediately when we commit changes. 
 
 
