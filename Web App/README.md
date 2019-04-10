@@ -537,12 +537,8 @@ When you are in the directory, type `clone https://github.com/YOUR_ID/YOUR_GITHU
 ## Step 4: Copy over project files
 Open up your file explorer and navigate to the directory where you cloned your repository files (for me it is C:\Users\Hayden\Documents\GitHub\PROJECT_NAME)
 
-Create a folder (e.g. my-app) and move your entire project files and folder here  
+Move your entire project files and folder here  
 (Note: your project files and folder will look different to the screenshot)
-
-Make sure you create a folder inside the repo folder or else you'll have errors later from Azure.
-
-Open up `.gitignore` (in the root repo folder) and change `/node_modules` to `my-app/node_modules` and remove the line `/build`. By doing these, we are making sure the node modules files don't get uploaded and build files get uploaded.
 
 ![Copy Files](githubImages/copy_files.PNG)
 
@@ -569,33 +565,24 @@ If you see something like this, you have successfully uploaded your files to Git
 
 ![Git Push](githubImages/git_push.PNG)
 
-## Step 6: `npm run build`
-Open up console in your project folder (if its not open already) and type `npm run build`. You should see something like this.
 
-![npm run build](githubImages/npmrunbuild.PNG)
-
-You will also notice that there is now a folder called build in the project folder. These are the files that we'll deploy to Azure.
-
-## Step 7: Push the build folder + files onto GitHub
-Just like we did in step 5, commit the changes onto GitHub. 
-
-## Step 8: Create an Azure Web App
+## Step 6: Create an Azure Web App
 Navigate to [Azure Portal](https://portal.azure.com) and log in
 
 We want to create a Web App. To do that, press '+' -> Web -> Web App
 
 ![Create web app](githubImages/create_web_app.PNG)
 
-Fill out the form with the app name (which will become your web url) and subscription (your subscription name will be different to what you see in this screenshot). Leave the rest as default and click 'create'.
+Fill out the form with the app name (which will become your web url) and subscription (your subscription name will be different to what you see in this screenshot). Also change runtime stack to node.js. Leave the rest as default and click 'create'.
 
 ![Create web app](githubImages/create_web_app_details.PNG)
 
 Now sit back and rest while Azure creates your web app!
 
-## Step 9: Deploy web app from GitHub
+## Step 7: Deploy web app from GitHub
 Once Azure is done creating the web app, open the resource by going to App Service (under favourites) and select your web app
 
-![Resource](githubImages/web_app_resource0.PNG)
+![Resource](githubImages/web_app_resource.PNG)
 
 From here, click on 'Deployment Center' and select 'GitHub'. (You will need to connect your GitHub account with Azure)
 
@@ -607,23 +594,13 @@ For configure, select the correct GitHub repo and select `master` for branch.
 
 Review the summary and continue.
 
-Azure will now fetch the latest code from GitHub and deploy onto your web app!
+Azure will now fetch the latest code from GitHub and automatically build the project and deploy!
 
-## Step 10: Virtual applications and directories
+## Step 8: Check your web app!
 
-If you navigate to your web app now, you'll either get the default Azure landing page or something along the lines of 'You do not have permission to view this directory or page...'. This is because we haven't set the index.html page inside the build folder to be the root virtual path.
+Once the build is complete, if you navigate to your web app `https://YOUR_WEB_APP_NAME.azurewebsites.net` you should see your web app live in action!
 
-To do that, select Configuration (under settings) and press the 'Path Mapping' tab
-
-![Virtual path](githubImages/virtual_path.PNG)
-
-Here, change the first row's physical path from `site\wwwroot` to `site\wwwroot\my-app\build` and click save.
-
-## Step 11: Check your web app!
-
-Now if you navigate to your web app `https://YOUR_WEB_APP_NAME.azurewebsites.net` you should see your web app live in action!
-
-If you get a message similar to 'You do not have permission to view this directory or page...', this might be an issue where Azure does not know where your build folder is. To check what has been uploaded to Azure, go to `https://YOUR_WEB_APP_NAME.scm.azurewebsites.net/DebugConsole` and click 'Debug console' -> 'CMD'. Here you'll see a directory with all the files and folders currently uploaded to Azure. Make sure the physical path is correctly linked to the build folder.
+Now everytime you push your changes to GitHub, Azure will automatically build and deploy!
 
 ## Step 11: Congratulations! 🎉
 
