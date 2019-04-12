@@ -605,3 +605,19 @@ Now everytime you push your changes to GitHub, Azure will automatically build an
 ## Step 11: Congratulations! 🎉
 
 You have successfully uploaded your web app to Azure! 🎂
+
+
+# Assignment
+For your assignment, you will need to create this web app and deploy to Azure. But rather than just copy pasting what we've got here, you will need to customise the look and feel of the page. This could be as simple as changing the theme from dark mode to light mode or changing the layout around.
+
+You will need to submit your GitHub repo url, azure web app url, and submit screenshots to show that you've completed the Microsoft learn video (below). Submissions will be done through the portal that we will provide to you.
+
+
+### Learn videos
+1. [Microsoft Learn - Build a simple website](https://docs.microsoft.com/en-us/learn/modules/build-simple-website/?fbclid=IwAR2WwQj5XVBffvbMuEQdFxiNutvb6T7q4_8q-e-uagi1Tixhrwzjt48D5E0)
+
+Checklist
+- Code available on GitHub (submit GitHub repo url)
+- App deployed to Azure (submit Azure web app URL)
+- Customized UI (e.g change in theme, layout etc)
+- Microsoft learn video (submit screenshot)
