@@ -3,7 +3,7 @@
 # Introduction
 
 Welcome to the MSA 2019 module on AI and Machine Learning. This module hopes to teach you the fundamental ideas behind Machine Learning and give you a picture of what it looks like to use Machine Learning and why it's useful.
-We'll be leveraging some powerful Python libraries into order to do our analysis on the dataset. These powerful libraries which Python users have ahas become a dominant language for doing data analysis with machine learning. We are going to look at how we can leverage Python and some of the popular libraries in Jupyter Notebooks run on Azure Notebooks to predict the fuel efficiency of cars in a dataset.
+We'll be leveraging Python along with some of its powerful libraries into order to do our analysis on the dataset in Jupyter Notebooks run on Azure Notebooks. These powerful libraries which Python users have access to is one of the reasons that Python has become the dominant language for doing data analysis with machine learning.
 
 
 ### In this lesson, you'll learn how to:
