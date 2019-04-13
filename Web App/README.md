@@ -177,7 +177,7 @@ Within the ```Header.css``` file also add the following code to style our header
 # Coding The Drop Area
 Now we need to code up our drop area.
 
-Start by typing  `npm i --save react-dropzone` followed by `npm i @types/react-dropzone` into your integrated terminal. We will be using react-dropzone https://github.com/react-dropzone/react-dropzone in order to have a drag and drop API for our images.
+Start by typing  `npm i --save react-dropzone@4.3.0` followed by `npm i @types/react-dropzone@4.2.0` into your integrated terminal. We will be using react-dropzone https://github.com/react-dropzone/react-dropzone in order to have a drag and drop API for our images.
 
 Now that we have the DropArea installed go ahead and create two files within the DropArea folder and call these ```DropArea.tsx``` and ```DropArea.css```
 

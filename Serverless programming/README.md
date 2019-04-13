@@ -41,7 +41,7 @@ Now you can see it checks the myTimer state to see if it has passed the timer yo
 
 ## Part 2 - Twilio Integration
 
-Twilio is a telephony service that you can use to send text messages. Usually twilio would cost, but they provide a free trial with $15 of credit which will be plenty for our tutorial.
+Twilio is a telephony service that you can use to send text messages. Twilio does cost money to use, but they provide a free trial with $15 of credit which will be plenty for our tutorial.
 
 Create an account on https://twilio.com and register for a free trial. Here you want to generate a new trial phone number, get an API key and a passcode. 
 
