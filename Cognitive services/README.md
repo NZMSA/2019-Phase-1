@@ -31,7 +31,7 @@ Your app will utilize the power of **Vision API** *(Face)* in order to detect an
 
 So, basically not only you will learn about building a basic web application in **React JS** *(Which is really popular right now)* and implementing AI capabilities into your web app, you will finish this module with a fully functional web application you can show off to your mates or employers. 👍
 
-<p align="center">[Place Holder for Evelyn and Paul GIF using the web app.]</p>
+<p align="center"><img src="images/demo.gif"/></p>
 
 ## Knowledge Requirements
 
@@ -126,7 +126,7 @@ Create a web application utilizing any of the Cognitive Service APIs. The app mu
 3. Screenshot of your profile showing 
 - [Complete faces with computer vision module](https://docs.microsoft.com/en-us/learn/modules/identify-faces-with-computer-vision/)
 
-<img src="images/microsoft-learn.PNG"  width="200"/>
+<img src="images/microsoft-learn.PNG"  width="400"/>
 
 - 1 another complete module relevant to cognitive services from Microsoft Learn platform.
 
