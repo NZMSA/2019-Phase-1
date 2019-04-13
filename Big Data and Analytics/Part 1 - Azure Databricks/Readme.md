@@ -33,11 +33,11 @@ First we will need to log in to the Azure portal at portal.azure.com. On the das
 
 In the search box, type "azure databrick"
 
-![image](img/azure2.png)
+![image](img/azure2.PNG)
 
 Click on Azure Databricks and you should be shown the below. Depending on your subscription, you may need to click the sign up button which displays (looks different to the below screenshot). If required sign up, otherwise click create.
 
-![image](img/azure3.png)
+![image](img/azure3.PNG)
 
 We now need to fill in some basic information in order to create our Databricks service. Enter in a workspace name. For subscription, this will likely be your Azure for Students (or similar). The resource group is important for our case. Opt to create a new one. You can name it whatever you like, but be sure you remember what this name is. Reason being, Databricks can become quick costly, so i recommend deleting your resource group (which would also delete your Databricks service) when you wont be using it. This way you can be sure that your $100 wont run out without you actually using it. Deleting resource group will be shown later in this guide.
 
@@ -45,15 +45,15 @@ Ensure you select the Trial, 14 days Free DBUs for the pricing Tier.
 
 Click Create.
 
-![image](img/azure4.png)
+![image](img/azure4.PNG)
 
 Once it gets created, you should be redirected to the service. If this doesnt happen, you can search in the Azure search bar with the name you called it to get to this view.
 
-![image](img/azure5.png)
+![image](img/azure5.PNG)
 
 Click "Launch Workspace". This will connect you to your Databricks workspace through single sign on. 
 
-![image](img/azure6a.png)
+![image](img/azure6a.PNG)
 
 Congratulations! You've successfully created your Azure Databricks service.
 
@@ -66,7 +66,7 @@ In order to do things in Databricks, we first need a cluster, so lets create one
 On the main Databricks dashboard, on the left you should note a menu titled "Clusters". Click on this. You should get redirected to a similar screen.
 
 
-![image](img/azure8.png)
+![image](img/azure8.PNG)
 
 Click on "Create Cluster"
 
@@ -78,7 +78,7 @@ We will also change the terminate after minutes to 30. What this means, is that 
 
 Lastly lets change our number of Workers to 1.
 
-![image](img/azure9a.png)
+![image](img/azure9a.PNG)
 
 The remaining settings should be OK as per the screenshot. Click Create Cluter.
 
@@ -90,21 +90,21 @@ Once it has a green dot next to it, it means its up and running and we can move 
 
 Remember the dataset you saved from step 0? We'll need it now. Back on the Databricks dashboard, click on Data and "Add Data"
 
-![image](img/azure10.png)
+![image](img/azure10.PNG)
 
 Now drag your CSV to the File dropzone. For this example, we will be using movies_metadata.csv (a copy can be obtained from [here](https://www.kaggle.com/rounakbanik/the-movies-dataset))
 
-![image](img/azure11.png)
+![image](img/azure11.PNG)
 
-![image](img/azure12.png)
+![image](img/azure12.PNG)
 
 Click "Create Table with UI". Select your Cluster from the previous step. Click preview table.
 
-![image](img/azure13.png)
+![image](img/azure13.PNG)
 
 A preview of your csv file should get loaded. Depending on your file, you may need to select the highlight option if your first row is headers, like in this case.
 
-![image](img/azure14.png)
+![image](img/azure14.PNG)
 
 Click Create.
 
@@ -116,15 +116,15 @@ In order to interact with the table we will need to create a notebook. A noteboo
 
 To create a notebook, click Workspace on the left menu -> on your account click the drop down arrow -> create -> notebook
 
-![image](img/azure15.png)
+![image](img/azure15.PNG)
 
 In the dialog which appears, enter a name, select your chosen language (for this im going to use Python), and select your cluster if its not already populated. Click create.
 
-![image](img/azure16.png)
+![image](img/azure16.PNG)
 
 Once created, you'll be taken to your notebook, with one cell present. You can create as many cells as you like, however for this example we will stick to a single cell. The cell is where you put in your code. This is where the bulk of your data manipulations will occur.
 
-![image](img/azure17.png)
+![image](img/azure17.PNG)
 
 ## 5. Read the raw dataset
 
@@ -163,7 +163,7 @@ Note: It may complain or not show if you dont have a cluster. To connect your cl
 
 Once complete, you'll see a table which displays the dataframe. If you want to download this, you can click the highlighted drop down. (However we havent done anything with the dataframe yet, so this would be pointless at this moment).
 
-![image](img/azure19.png)
+![image](img/azure19.PNG)
 
 ## 6. Transformations
 
@@ -311,7 +311,7 @@ display(genre)
 We have created the dataframe we need to create the MovieType table we need. Saving this as a table is covered in the next section, but while displaying it, we can save this as a csv. Lets do that now as this is a requirement of the assessment (you need to submit csv's of the cleaned tables you will create) To save click the highlight drop down in the below screenshot and select download full results. (Note dont click the icon as it doesnt download the full results.)
 
 Output should look like:
-![image](img/azure20.png)
+![image](img/azure20.PNG)
 
 Lets now do the same to create the MovieCompanies dataframe.
 
@@ -409,7 +409,7 @@ Run the cell.
 
 Woo hoo! Hopefully all the tables have been created. But how do we know? Easy, click the data menu on the left, if everything has gone well, you should be shown 4 tables under the default database.
 
-![image](img/azure21.png)
+![image](img/azure21.PNG)
 
 Final Complete code:
 ```
@@ -490,24 +490,24 @@ movies\
 So we've done everything we need to do to our data. Now we need to get some items from our databricks workspace so we can use these in Power BI to connect to our tables.
 
 On the top right, you'll notice a person icon. Click it and select user settings.
-![image](img/azure22.png)
+![image](img/azure22.PNG)
 
 You'll be taken to the tab which mentions Access Token. Click Generate New Token.
 
-![image](img/azure23.png)
+![image](img/azure23.PNG)
 
 Name it PowerBI and press generate. You will be given a key. Copy this key down and save it to a text file somewhere on your local computer as you will need this in part 2 and you wont be able to access or view this key after this moment. Press done.
 
 Now we need to get a server url. Click on clusters on the left menu and select your cluster. Click advanced options (highlighted)
 
-![image](img/azure24.png)
+![image](img/azure24.PNG)
 
 Then select JDBC/ODBC
 
-![image](img/azure25.png)
+![image](img/azure25.PNG)
 
 Scroll down to the JDBC URL text box and copy the highlighted. Copy this to a text file.
-![image](img/azure26.png)
+![image](img/azure26.PNG)
 
 Then add https: to the start of it. It should look something like (based on above screenshot):
 
@@ -526,19 +526,19 @@ Its good to delete your databricks service when you wont be using it to prevent 
 Go back to your tab which has the Azure Portal Open (or open another tab and go to [azure](portal.azure.com))
 
 In the top search bar, enter in the name of your resource group.
-![image](img/azure27.png)
+![image](img/azure27.PNG)
 
 Click on the entry under Resource Groups (as highlighted).
-![image](img/azure28.png)
+![image](img/azure28.PNG)
 
 Click the Delete resource group button.
-![image](img/azure29.png)
+![image](img/azure29.PNG)
 
 Enter in the name of the resource group and click delete.
-![image](img/azure30.png)
+![image](img/azure30.PNG)
 
 It should start to delete. This will take some time, to be sure its deleting, click the bell on the top right and you should see a notification that its deleting.
-![image](img/azure31.png)
+![image](img/azure31.PNG)
 
 ###To continue your work next time:
 You'll need to do steps: 1, 2, 3, 4, (and 8 if you want to connect to PowerBI this time). Then paste in the text you saved from your last notebook from the text file on your computer. Finally to redo step 9 and delete the resource group once your done again.
