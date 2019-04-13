@@ -29,7 +29,7 @@ In this subsection we will create an account to use PowerBI. We will connect to 
 For your assignment, you will need to:
 - Select a different dataset. You can use more than one datasets if you like. (Hint: Head over to Kaggle to find a variety of datasets).
 - Create an Azure Databricks workspace, create a cluster and notebook
-- Load your selected dataset and perform at least 3 or more **useful** transformations on the data. If you decide to do a format revision transformation as per the documentation, please dont just copy the currency conversion example. (Examples of transformation types are in the Part 1 documentation)
+- Load your selected dataset and perform at least 3 or more **useful** types of transformations on the data. If you decide to do a format revision transformation as per the documentation, please dont just copy the currency conversion example. (Examples of transformation types are in the Part 1 documentation or at [this link](https://www.stitchdata.com/etldatabase/etl-transform/))
 - Create and save a new table(s) based on the manipulations you performed above.
 - Connect Power BI to your Azure Databricks workspace table(s).
 - Create visualisations in Power BI using the above table(s).
