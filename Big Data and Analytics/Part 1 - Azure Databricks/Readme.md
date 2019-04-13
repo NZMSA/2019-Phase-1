@@ -526,18 +526,23 @@ Its good to delete your databricks service when you wont be using it to prevent 
 Go back to your tab which has the Azure Portal Open (or open another tab and go to [azure](portal.azure.com))
 
 In the top search bar, enter in the name of your resource group.
+
 ![image](img/azure27.PNG)
 
 Click on the entry under Resource Groups (as highlighted).
+
 ![image](img/azure28.PNG)
 
 Click the Delete resource group button.
+
 ![image](img/azure29.PNG)
 
 Enter in the name of the resource group and click delete.
+
 ![image](img/azure30.PNG)
 
 It should start to delete. This will take some time, to be sure its deleting, click the bell on the top right and you should see a notification that its deleting.
+
 ![image](img/azure31.PNG)
 
 ###To continue your work next time:
