@@ -545,5 +545,5 @@ It should start to delete. This will take some time, to be sure its deleting, cl
 
 ![image](img/azure31.PNG)
 
-###To continue your work next time:
+### To continue your work next time:
 You'll need to do steps: 1, 2, 3, 4, (and 8 if you want to connect to PowerBI this time). Then paste in the text you saved from your last notebook from the text file on your computer. Finally to redo step 9 and delete the resource group once your done again.
