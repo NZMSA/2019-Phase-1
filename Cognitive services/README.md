@@ -140,8 +140,6 @@ You are ready to go. Dig in and start coding! Simply follow the 3 parts tutorial
 
 #### Part 2 - **2. Implementing Real-time Emotion Analysis**
 
-#### Part 3 - **3. Integrating Both Part Together**
-
 **Good luck and have fun!**
 
 *We would love to hear your feedback. Discuss them on Facebook Group or email us at nzmsa@microsoft.com*
