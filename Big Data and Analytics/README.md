@@ -13,7 +13,7 @@ The big data and analytics module will focus on transforming data into insightfu
 - An Azure for Students subscription
 - Power BI Desktop Application
     - For those who have a Mac, you will need to create a VM running windows as Power BI is Windows only
-- Some basic knowledge on one or more of the following languages (not required but will make things easier):
+- Some basic knowledge on one of the following languages (not required but will make things easier):
     - Python, Scala, R, SQL
 - Enthusiasm
 
