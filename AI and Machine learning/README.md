@@ -82,6 +82,6 @@ Complete the following checklist:
 - Analyse it (plot histograms and scatter plots to see what the correlations are like)
 - Run a machine learning model on the data
 (e.g. Linear Regression, Random Forest, etc.)
-- Add comments explaining why you are doing particular steps and add comments about any notable observation you make.
+- Add comments explaining why you performed each step and add comments about any notable observation you make.
 
 You will need to submit a link to your Azure Notebook (make sure it's set to public) to us for marking.
