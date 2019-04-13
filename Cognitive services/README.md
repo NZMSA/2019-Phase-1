@@ -134,7 +134,7 @@ Suggestion: [Microsoft Learn: Cognitive Services](https://docs.microsoft.com/en-
 
 ## Where from here?
 
-You are ready to go. Dig in and start coding! Simply follow the 3 parts tutorial in this guide.
+You are ready to go. Dig in and start coding! Simply follow the 2 parts tutorial in this guide.
 
 #### Part 1 - **1. Implementing Video Player.**
 
