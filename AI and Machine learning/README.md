@@ -76,8 +76,8 @@ Now you've gotten your Azure Notebook ready, we can look for some data to analys
 For your assignment, you will need to perform a similar analysis on another dataset like the one in the video / the notebook linked above.
 Complete the following checklist:
 
-- Create an Azure notebook
-- Find another dataset (not the one used in this video)
+- Create an Azure notebook (here: https://notebooks.azure.com/)
+- Find another dataset (not the one used in this video) [There are some good ones here: https://archive.ics.uci.edu/ml/datasets.php]
 - Clean it (remove bad data)
 - Analyse it (plot histograms and scatter plots to see what the correlations are like)
 - Run a machine learning model on the data
