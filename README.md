@@ -9,14 +9,15 @@ Phase 1 of MSA in 2019 will have 2 components:
     - Databases/API
     - Serverless programming
     - Web App
-- Watch three videos on the [Microsoft learn platform](https://docs.microsoft.com/en-us/learn/) and submit a screenshot of the dashboard
-    - The MSP's will outline which three videos you have to watch in the respective YouTube video.
+- Watch videos on the [Microsoft learn platform](https://docs.microsoft.com/en-us/learn/) and submit a screenshot of the dashboard
+    - The MSP's will outline which videos you have to watch in the respective GitHub Documentaion.
+    - Some courses have fewer MS Learn videos to balance out the work load
 
 It is in your best interest to watch as many videos and upskill as much as you can on all the content created by the MSP's as Phase 2 will incorporate components of each video to create a more complete software system.
 
 These videos will be uploaded to our [YouTube](https://www.youtube.com/channel/UCCegNuS_AZjK-P3ZMN3JXNw) channel - Subscribe and turn on the notification bell to keep up to date. 
 
-You will be notified via email about how to submit, deadline confirmation and when the videos are uploaded ([Register here](https://www.aka.ms/registermsa) for communications) and like our [Facebook page](https://www.aka.ms/nzmsa) to stay up to date.
+You will be notified via email about how to submit, deadline confirmation and when the videos are uploaded ([Register here](https://bit.ly/2UgEqav) for communications) and like our [Facebook page](https://www.aka.ms/nzmsa) to stay up to date.
 
 Sign up for Microsoft Azure for Students [(Documentation can be found here)](https://github.com/NZMSA/2019-Phase-1/tree/master/Azure%20For%20Students). Get $100 credit when you create your free account. There is no credit card needed and 12 months of free Azure services. Find out more information [here](https://azure.microsoft.com/en-us/free/students/)
 
