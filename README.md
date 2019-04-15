@@ -9,8 +9,8 @@ Phase 1 of MSA in 2019 will have 2 components:
     - Databases/API
     - Serverless programming
     - Web App
-- Watch videos on the [Microsoft learn platform](https://docs.microsoft.com/en-us/learn/) and submit a screenshot of the dashboard
-    - The MSP's will outline which videos you have to watch in the respective GitHub Documentaion.
+- Complete the exercises on the [Microsoft learn platform](https://docs.microsoft.com/en-us/learn/) and submit a screenshot of the dashboard
+    - The MSP's will outline which exercises you have to watch in the respective GitHub Documentaion.
     - Some courses have fewer MS Learn videos to balance out the work load
 
 It is in your best interest to watch as many videos and upskill as much as you can on all the content created by the MSP's as Phase 2 will incorporate components of each video to create a more complete software system.
