@@ -133,6 +133,8 @@ For your assignment, you will need to complete a similar task except you will ha
 You will need to have your code available on GitHub, and also complete these three Microsoft Learn videos. You will have to submit your screenshots along with your code in the submission portal that we will provide to you.
 
 ### Learn videos
-1. https://docs.microsoft.com/en-us/learn/modules/create-serverless-logic-with-azure-functions/ 
-2. TBC
-3. TBC  
+1. Create serverless logic with Azure Functions
+2. Execute an Azure Function with triggers
+3. Chain Azure functions together using input and output bindings
+
+Can be found here: https://docs.microsoft.com/en-us/learn/paths/create-serverless-applications/
