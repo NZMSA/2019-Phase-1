@@ -69,6 +69,24 @@ You can find that this is successful when your "Dependencies" inside package.jso
   }
   ```
   
+  If this does not work, you can create a package.json file manually, add the following lines, and run ```npm install```:
+  ```
+  {
+  "name": "the-name-of-your-trigger-function",
+  "version": "1.0.0",
+  "description": "Receive SMS with Azure Functions and Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Twilio",
+  "license": "MIT",
+  "dependencies": {
+    "twilio": "^3.0.0"
+  }
+}
+
+  ```
   Great! Now we can start the fun stuff.
   
   ## Coding your function app.
