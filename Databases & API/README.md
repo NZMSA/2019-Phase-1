@@ -31,7 +31,7 @@ There are a few programs you will need to have installed prior to commencing thi
 
 
 *Additional Resources:*<br/>
-If you haven't used git before, you need watch <a href="https://www.youtube.com/watch?v=lE3eIlMpUu0">Mastering Git + GitHub</a>. You must know how to use Git to pass this assignment.<br/>
+If you haven't used `Git` before, you need to watch <a href="https://www.youtube.com/watch?v=lE3eIlMpUu0">Mastering Git + GitHub</a>. You must know how to use Git to pass this assignment.<br/>
 You also **must complete the Core Cloud Services** module in <a href="https://docs.microsoft.com/en-us/learn/paths/azure-fundamentals/"> - Introduction to Azure</a> (You must log in to save your progress, this module should take about 36 minutes)
 
 
