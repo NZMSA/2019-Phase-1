@@ -32,7 +32,7 @@ There are a few programs you will need to have installed prior to commencing thi
 
 *Additional Resources:*<br/>
 If you haven't used `Git` before, you need to watch <a href="https://www.youtube.com/watch?v=lE3eIlMpUu0">Mastering Git + GitHub</a>. You must know how to use Git to pass this assignment.<br/>
-You also **must complete the Core Cloud Services** module in <a href="https://docs.microsoft.com/en-us/learn/paths/azure-fundamentals/"> - Introduction to Azure</a> (You must log in to save your progress, this module should take about 36 minutes)
+You also **must complete the Core Cloud Services** module in - <a href="https://docs.microsoft.com/en-us/learn/paths/azure-fundamentals/"> Introduction to Azure</a> (You must log in to save your progress, this module should take about 36 minutes)
 
 
 ## 1.1 Learning Outcome
@@ -195,12 +195,12 @@ Make sure you have an active subscription, navigate to https://portal.azure.com 
 
   Right click on controllers from the Solution Explorer - ```Add - New Scaffold item...```
 
-  <br/>![image](img/addScaffoldItem.png)<br/>
+  <br/>![image](img/addScaffoldItem.PNG)<br/>
 
   Choose ```API Controller with actions, using Entity Framework```
   <br/>![image](img/scaffoldControllerUsingEF.PNG)<br/>
 
-  Choose Students in Model class, schoolSISContext as Data context class and controller name should be auto-completed.
+  Choose Students in Model class, schoolSIMSContext as Data context class and controller name should be auto-completed.
 
   <br/>![image](img/editController.PNG)<br/>
 
@@ -220,7 +220,7 @@ Make sure you have an active subscription, navigate to https://portal.azure.com 
     },
     "AllowedHosts": "*",
     "ConnectionStrings": {
-        "schoolSISContext" : "YOURCONNECTIONSTRING"
+        "schoolSIMSContext" : "YOURCONNECTIONSTRING"
     }
   }
   ```
