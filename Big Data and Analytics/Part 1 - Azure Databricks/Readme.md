@@ -1,3 +1,7 @@
+
+#NOTE: 
+This tutorial requires a either a paid Azure subscription or Visual Studio Enterprise subscription as Databricks requires 2x 4 core VMs (8 cores in total). The max Azure allows on trial plans is 4 cores. You have the option of using Azure Notebooks. We are in the process of updating this tutorial to use Azure Notebooks. Thanks for your patience.
+
 # Part 1 - Azure Databricks
 In this subsection we will learn how to set up an Azure Databricks service to perform ETL. We will go through connecting into your Databricks workspace, where we will create a cluster and notebook. We will upload a large dataset and within the created notebook we will use Python (however you can use Scala, R, or SQL if you prefer) to perform operations on it. We will create a configuration which we can then use in Part 2 to connect to Power BI.
 
