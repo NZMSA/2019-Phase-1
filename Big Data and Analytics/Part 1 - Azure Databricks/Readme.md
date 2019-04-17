@@ -1,5 +1,5 @@
 
-#NOTE: 
+# NOTE: 
 This tutorial requires a either a paid Azure subscription or Visual Studio Enterprise subscription as Databricks requires 2x 4 core VMs (8 cores in total). The max Azure allows on trial plans is 4 cores. You have the option of using Azure Notebooks. We are in the process of updating this tutorial to use Azure Notebooks. Thanks for your patience.
 
 # Part 1 - Azure Databricks
