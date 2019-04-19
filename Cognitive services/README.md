@@ -33,6 +33,14 @@ So, basically not only you will learn about building a basic web application in 
 
 <p align="center"><img src="images/demo.gif"/></p>
 
+## Video Tutorial
+
+You can also find a complete video walkthrough of the project here. 😊
+
+<a href="https://www.youtube.com/watch?v=5OS_J_mfNYI" target="_blank"><p align="center"><img src="images/videothumbnail.png" 
+alt="Full Video Tutorial" width="300" border="10" /></p></a>
+
+
 ## Knowledge Requirements
 
 Don't be intimidated, this guide aims to be easy enough for anyone with little to no prior programming experience to follow.
