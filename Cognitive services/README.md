@@ -33,7 +33,7 @@ So, basically not only you will learn about building a basic web application in 
 
 <p align="center"><img src="images/demo.gif"/></p>
 
-## Video Tutorial
+## Video Tutorial <img src="images/youtube-icon.png"  width="30" alt="youtube icon"/>
 
 You can also find a complete video walkthrough of the project here. 😊
 
