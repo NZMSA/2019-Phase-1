@@ -39,19 +39,19 @@ Azure Notebooks is a free service that provides Jupyter notebooks along with sup
 First we need to log into the Azure Notebooks portal at notebooks.azure.com. You'll need a microsoft account for this - create one if you need to.
 
 Once you've logged in (and if you're logging in for the first time), you'll be prompted to create a user-id. Your user ID is used to access your profile and projects, and you'll need to submit your profile's URL for the assessment so choose one and click save.
-![image](img/azurenotebooks/azure0.png)
+![image](img/azurenotebooks/azure0.PNG)
 
 Under the "My Projects" title, click "create one now?" to create a new project. If you already have a project, click either on "SEE ALL" or "My Projects" at the top where it will take you to your existing projects and create a new one.
 
-![image](img/azurenotebooks/azure1.png)
+![image](img/azurenotebooks/azure1.PNG)
 
 You'll be presented with a "Create New Project" dialog. Pick a project name and enter it in the field. Feel free to name it whatever you like. The Project ID will be created automatically as you type in your project name. Lastly ensure the "Public" check box is selected (so that we can view your project).
 
-![image](img/azurenotebooks/azure3.png)
+![image](img/azurenotebooks/azure3.PNG)
 
 Once created you will be taken to the project. As I have the readme option ticked in the previous section, it has also been created and displayed.
 
-![image](img/azurenotebooks/azure4.png)
+![image](img/azurenotebooks/azure4.PNG)
 
 Think of your project like a git repository. You can add files and folders here and as it's public whoever navigates to your project can view and download the contents. CSV's you create later below will also appear here, as with the raw dataset which we will be adding.
 
@@ -60,32 +60,32 @@ Congratulations! You've successfully created your Azure Notebooks project.
 ## 3.  Create a Notebook
 
 To create a notebook, click the new button and select notebook.
-![image](img/azurenotebooks/azure4a.jpg)
+![image](img/azurenotebooks/azure4a.JPG)
 
 Enter in a name (can be any you like), and select a language. For this demo, I have selected Python. Click new.
-![image](img/azurenotebooks/azure5.png)
+![image](img/azurenotebooks/azure5.PNG)
 
 You should now see your new note book in your project.
-![image](img/azurenotebooks/azure6.png)
+![image](img/azurenotebooks/azure6.PNG)
 
 Lets click on the notebook to open it up. Upon opening you should see the following:
 1: The Run button will run the current selected cell
 2: This is a cell. You enter in your code here.
 3: File menu item - you can use this to save or export your notebook. In here you can also upload and download files in your project.
 4: The plus button will add cells to your notebook. Also to note, after running a cell (1), a new cell will be automatically created below.
-![image](img/azurenotebooks/azure7a.jpg)
+![image](img/azurenotebooks/azure7a.JPG)
 
 ## 4. Upload a raw dataset
 
 Remember the dataset you saved from step 0? We'll need it now. In your opened notebook, click the File menu item and select upload.
 
-![image](img/azurenotebooks/azure12a.png)
+![image](img/azurenotebooks/azure12a.PNG)
 
 From the pop up dialog, select your chosen csv file. For this example, we will be using movies_metadata.csv (a copy can be obtained from [here](https://www.kaggle.com/rounakbanik/the-movies-dataset))
 
 Once selected, change the destination folder from ~/ to /project. This will ensure your csv persists over time rather than just this session.
 
-![image](img/azurenotebooks/azure13.png)
+![image](img/azurenotebooks/azure13.PNG)
 
 Click start upload. The status bar will be in green after a successful upload.
 
@@ -107,10 +107,10 @@ To install it, click on the first cell in your notebook and add the following:
 ```
 
 Now click the run button and wait for the notebook to do its thing.
-![image](img/azurenotebooks/azure9.png)
+![image](img/azurenotebooks/azure9.PNG)
 
 You will know it is completely installed when you see the following
-![image](img/azurenotebooks/azure10.png)
+![image](img/azurenotebooks/azure10.PNG)
 
 
 Once it's completed, we need to import a few modules.
@@ -136,7 +136,7 @@ spark
 
 Once its complete it should return the AppName, version etc.
 
-![image](img/azurenotebooks/azure11a.png)
+![image](img/azurenotebooks/azure11a.PNG)
 
 Our notebook is now set up and ready to use.
 
@@ -174,7 +174,7 @@ movies.limit(10).toPandas()
 ```
 
 Once run it should look similar to:
-![image](img/azurenotebooks/azure14.png)
+![image](img/azurenotebooks/azure14.PNG)
 
 You can also find out the number of rows in your dataframe by running the following
 
@@ -283,7 +283,7 @@ genre.limit(10).toPandas()
 We have created the dataframe we need to create the MovieType table we need. Saving this as a csv is covered in the next section.
 
 Output should look like:
-![image](img/azurenotebooks/azure15.png)
+![image](img/azurenotebooks/azure15.PNG)
 
 Lets now do the same to create the MovieCompanies dataframe.
 
@@ -349,11 +349,11 @@ Woo hoo! Hopefully all the csvs have been created.
 
 So how do we download the created CSV's? Easy, click the File menu on the top left (when youre in the notebook), and select download. Now click on project and then select the three csv files. (These are actually folders which contain the csv inside which you will need to rename). 
 
-![image](img/azurenotebooks/azure16.png)
+![image](img/azurenotebooks/azure16.PNG)
 
-![image](img/azurenotebooks/azure17.png)
+![image](img/azurenotebooks/azure17.PNG)
 
-![image](img/azurenotebooks/azure18.png)
+![image](img/azurenotebooks/azure18.PNG)
 
 
 You can also download them from the project view too. 
