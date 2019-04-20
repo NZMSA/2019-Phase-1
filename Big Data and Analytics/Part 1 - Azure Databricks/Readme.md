@@ -1,26 +1,24 @@
+# Part 1 - Azure Notebooks
+In this subsection we will learn how to set up and use Azure Notebooks to perform ETL. We will go through setting up a project and a notebook. We will upload a large dataset and within the created notebook we will use Python (however you can use Scala, R, or SQL if you prefer) to perform operations on it. We willsave our transformed dataframes to CSV which we can then use in Part 2 to connect to Power BI.
 
-# NOTE: 
-This tutorial requires either a paid Azure subscription or a Visual Studio Enterprise subscription as Databricks requires 2x 4 core VMs (8 cores in total). The max Azure allows on trial plans is 4 cores. You have the option of using Azure Notebooks. We are in the process of updating this tutorial to use Azure Notebooks. Thanks for your patience.
+### Assessment (This will be covered in this tutorial)
+- Please create a public project and submit the project link (just navigate and open your project and copy paste the link. Please be sure to test this link works by logging out and opening it or opening it in an incognito browser window)
 
-# Part 1 - Azure Databricks
-In this subsection we will learn how to set up an Azure Databricks service to perform ETL. We will go through connecting into your Databricks workspace, where we will create a cluster and notebook. We will upload a large dataset and within the created notebook we will use Python (however you can use Scala, R, or SQL if you prefer) to perform operations on it. We will create a configuration which we can then use in Part 2 to connect to Power BI.
 
+\
 Let's get stared!
 
 ## Contents
 0. Find a dataset
-1. Create an Azure Databricks service
-2. Create a Cluster
-3. Upload a raw dataset
-4. Create a Notebook
-5. Read the raw dataset
-6. Transformations
-7. Create new table(s) with the cleaned data
-8. Setup/get config to connect to Power BI
-9. Clean up / Deleting the Resource Group / Do this before closing your web browser!!
-
-# Very important message below!
-**Azure Databricks can become quite expensive to run (we are lucky we get a 14 day free-trial of the service otherwise you'd be looking at close to $1000 to run per month). However there will still be a cost for the cluster.** With your Azure for Students subscription, you get $100 free to use. In order to not waste this credit without actually utilising the service, i recommend taking a text copy of your notebook text (and saving this to your local computer) and then deleting the service by deleting the resource group before you close your internet browser. When you want to continue your work, then create a new databricks service, reupload your dataset and paste in your copied text from your previous notebook. This way you can be sure you dont run out of credit or get over charged. Also this way the cost should stay within the free $100 you get. If you've entered your credit card details, then this could get charged so please take even extra caution in that case. We wont be responsible for any costs incurred. In no event shall the authors be liable for any claim, damages or other liability, whether in an action of contract, tort, or otherwise, arising from, out of or in connection with this guide. By continuing you agree to this. 😊
+1. What is Azure Notebooks?
+2. Create a project in Azure Notebooks
+3. Create a notebook
+4. Upload a raw dataset
+5. Set up the notebook
+6. Read the raw dataset
+7. Transformations
+8. Create new table(s) with the cleaned data
+9. Download the CSVs
 
 
 # Let's get started
@@ -29,147 +27,163 @@ Let's get stared!
 
 As we will be manipulating a dataset, we first need to get one. I recommend signing up to Kaggle.com and looking through their collection of datasets. Find one which interests you and download its associated CSV file. You will need this in a later step.
 
-## 1. Create an Azure Databricks service
+## 1. What is Azure Notebooks? 
 
-First we will need to log in to the Azure portal at portal.azure.com. On the dashboard you will find to your right a green cross with "Create a resource".
+Azure Notebooks is a free service that provides Jupyter notebooks along with supporting packages for R, Python and F# as a service. Jupyter Notebook is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text. Uses include: data cleaning and transformation, numerical simulation, statistical modeling, data visualization, machine learning,and much more.
 
-![image](img/azure1.jpg)
-
-In the search box, type "azure databrick"
-
-![image](img/azure2.PNG)
-
-Click on Azure Databricks and you should be shown the below. Depending on your subscription, you may need to click the sign up button which displays (looks different to the below screenshot). If required sign up, otherwise click create.
-
-![image](img/azure3.PNG)
-
-We now need to fill in some basic information in order to create our Databricks service. Enter in a workspace name. For subscription, this will likely be your Azure for Students (or similar). The resource group is important for our case. Opt to create a new one. You can name it whatever you like, but be sure you remember what this name is. Reason being, Databricks can become quick costly, so i recommend deleting your resource group (which would also delete your Databricks service) when you wont be using it. This way you can be sure that your $100 wont run out without you actually using it. Deleting resource group will be shown later in this guide.
-
-Ensure you select the Trial, 14 days Free DBUs for the pricing Tier.
-
-Click Create.
-
-![image](img/azure4.PNG)
-
-Once it gets created, you should be redirected to the service. If this doesnt happen, you can search in the Azure search bar with the name you called it to get to this view.
-
-![image](img/azure5.PNG)
-
-Click "Launch Workspace". This will connect you to your Databricks workspace through single sign on. 
-
-![image](img/azure6a.PNG)
-
-Congratulations! You've successfully created your Azure Databricks service.
-
-## 2. Create a cluster
-
-A cluster is a networked computer in Azure which will work to process your data and commands in your Notebook cells.
-
-In order to do things in Databricks, we first need a cluster, so lets create one.
-
-On the main Databricks dashboard, on the left you should note a menu titled "Clusters". Click on this. You should get redirected to a similar screen.
+[The Azure Notebooks website has a FAQ section which answers a bunch of really useful questions](https://notebooks.azure.com/faq#top)
 
 
-![image](img/azure8.PNG)
+## 2. Create a project in Azure Notebooks
 
-Click on "Create Cluster"
+First we need to log into the Azure Notebooks portal at notebooks.azure.com. You'll need a microsoft account for this - create one if you need to.
 
-Now we need to create a cluster. You can put any name you like for the cluster name. The 3 highlighted items in the screenshot are very key. By having this configuration we will minimise the charge.
+Once you've logged in (and if you're logging in for the first time), you'll be prompted to create a user-id. Your user ID is used to access your profile and projects, and you'll need to submit your profile's URL for the assessment so choose one and click save.
+![image](img/azurenotebooks/azure0.png)
 
-By disabling autoscaling, we will have a set number of workers. A worker runs the Spark executors and other services which are required for proper functioning of clusters.
+Under the "My Projects" title, click "create one now?" to create a new project. If you already have a project, click either on "SEE ALL" or "My Projects" at the top where it will take you to your existing projects and create a new one.
 
-We will also change the terminate after minutes to 30. What this means, is that our cluster will terminate and turn itself off after inactivity of 30 minutes.
+![image](img/azurenotebooks/azure1.png)
 
-Lastly lets change our number of Workers to 1.
+You'll be presented with a "Create New Project" dialog. Pick a project name and enter it in the field. Feel free to name it whatever you like. The Project ID will be created automatically as you type in your project name. Lastly ensure the "Public" check box is selected (so that we can view your project).
 
-![image](img/azure9a.PNG)
+![image](img/azurenotebooks/azure3.png)
 
-The remaining settings should be OK as per the screenshot. Click Create Cluter.
+Once created you will be taken to the project. As I have the readme option ticked in the previous section, it has also been created and displayed.
 
-You will note there will be a new enter on the list of Interactive Clusters. Your new cluster will have a loading spinner. This will normally take around 5 minutes to boot up.
+![image](img/azurenotebooks/azure4.png)
 
-Once it has a green dot next to it, it means its up and running and we can move on to the next part.
+Think of your project like a git repository. You can add files and folders here and as it's public whoever navigates to your project can view and download the contents. CSV's you create later below will also appear here, as with the raw dataset which we will be adding.
 
-## 3. Upload a raw dataset
+Congratulations! You've successfully created your Azure Notebooks project.
 
-Remember the dataset you saved from step 0? We'll need it now. Back on the Databricks dashboard, click on Data and "Add Data"
+## 3.  Create a Notebook
 
-![image](img/azure10.PNG)
+To create a notebook, click the new button and select notebook.
+![image](img/azurenotebooks/azure4a.jpg)
 
-Now drag your CSV to the File dropzone. For this example, we will be using movies_metadata.csv (a copy can be obtained from [here](https://www.kaggle.com/rounakbanik/the-movies-dataset))
+Enter in a name (can be any you like), and select a language. For this demo, I have selected Python. Click new.
+![image](img/azurenotebooks/azure5.png)
 
-![image](img/azure11.PNG)
+You should now see your new note book in your project.
+![image](img/azurenotebooks/azure6.png)
 
-![image](img/azure12.PNG)
+Lets click on the notebook to open it up. Upon opening you should see the following:
+1: The Run button will run the current selected cell
+2: This is a cell. You enter in your code here.
+3: File menu item - you can use this to save or export your notebook. In here you can also upload and download files in your project.
+4: The plus button will add cells to your notebook. Also to note, after running a cell (1), a new cell will be automatically created below.
+![image](img/azurenotebooks/azure7a.jpg)
 
-Click "Create Table with UI". Select your Cluster from the previous step. Click preview table.
+## 4. Upload a raw dataset
 
-![image](img/azure13.PNG)
+Remember the dataset you saved from step 0? We'll need it now. In your opened notebook, click the File menu item and select upload.
 
-A preview of your csv file should get loaded. Depending on your file, you may need to select the highlight option if your first row is headers, like in this case.
+![image](img/azurenotebooks/azure12a.png)
 
-![image](img/azure14.PNG)
+From the pop up dialog, select your chosen csv file. For this example, we will be using movies_metadata.csv (a copy can be obtained from [here](https://www.kaggle.com/rounakbanik/the-movies-dataset))
 
-Click Create.
+Once selected, change the destination folder from ~/ to /project. This will ensure your csv persists over time rather than just this session.
 
-Your raw data has now been uploaded as a table.
+![image](img/azurenotebooks/azure13.png)
 
-## 4. Create a Notebook
+Click start upload. The status bar will be in green after a successful upload.
 
-In order to interact with the table we will need to create a notebook. A notebook contains cell which can run code, render formatted text or display visualisations.
+Your raw data has now been uploaded to your project.
 
-To create a notebook, click Workspace on the left menu -> on your account click the drop down arrow -> create -> notebook
+## 5. Set up the notebook
 
-![image](img/azure15.PNG)
+Before we can start to do any transformations to our dataset - or even read that csv file we uploaded, we first need to configure some things in our notebook.
 
-In the dialog which appears, enter a name, select your chosen language (for this im going to use Python), and select your cluster if its not already populated. Click create.
+### Note following on, when entering code into the cells, dont forget to run the individual cells!
 
-![image](img/azure16.PNG)
+First we need to install the Pyspark library. Before i explain what this library does, we first need to understand what Spark is (Apache Spark). Apache Spark is a unified analytics engine for large-scale data processing. It is a popular open source framework that ensures data processing with lightning speed and supports various languages like Scala, Python, Java, and R. 
 
-Once created, you'll be taken to your notebook, with one cell present. You can create as many cells as you like, however for this example we will stick to a single cell. The cell is where you put in your code. This is where the bulk of your data manipulations will occur.
+Pyspark is a Python API for Spark that lets you harness the simplicity of Python and the power of Apache Spark in order to tame Big Data. 
 
-![image](img/azure17.PNG)
-
-## 5. Read the raw dataset
-
-To do manipulations, we first need to load our table with the raw data to a dataframe which we can then do operations on.
-
-As im using python, i'll start by adding some import statements into my cell. Im importing them all for simiplicity, but ideally you'd just import the ones you need.
-
+To install it, click on the first cell in your notebook and add the following:
 ```
+!pip install pyspark
+```
+
+Now click the run button and wait for the notebook to do its thing.
+![image](img/azurenotebooks/azure9.png)
+
+You will know it is completely installed when you see the following
+![image](img/azurenotebooks/azure10.png)
+
+
+Once it's completed, we need to import a few modules.
+1. `from pyspark.sql import SparkSession ` This is the Spark Session module. This module creates the entry point into Spark for our application. 
+2. `from pyspark.sql.functions import * ` This adds modules which allow us to use things such as concat, when, col, udf etc. Im importing them all for simplicity, but ideally you'd just import the ones you need.
+3. `from pyspark.sql.types import * ` These adds modules relating to type such as DateType, StringType etc. Once again im importing all for simplicity.
+
+You cell should look like the following:
+```
+from pyspark.sql import SparkSession
 from pyspark.sql.functions import * 
 from pyspark.sql.types import *
+```
+
+Go a head and click run (while that cell is selected).
+
+Now we need to create our spark entry point/session. To do this add the following code to a new cell and run it. You can name the appname whatever you like (for this demo i chose MSA Phase 1).
+
+```
+spark = SparkSession.builder.appName(name="MSA Phase 1").master("local[*]").getOrCreate().newSession()
+spark
+```
+
+Once its complete it should return the AppName, version etc.
+
+![image](img/azurenotebooks/azure11a.png)
+
+Our notebook is now set up and ready to use.
+
+## 6. Read the raw dataset
+
+To do manipulations, we first need to load our csv file with the raw data to a dataframe which we can then do operations on.
+
+Next i'll read the movies metadata csv which we uploaded previously and save it to a dataframe.
+
+```
+# Read in the movie csv and store it into a dataframe.
+movies = spark.read\
+    .option("header", "true")\
+    .option("inferSchema", "true")\
+    .csv("movies_metadata.csv")
 
 ```
 
-Next i'll read the movies table which was created and save it to a dataframe.
+(Dont forget the run the cell)
+
+We can view the schema of the dataframe we just created.
 
 ```
-# Read in the movie table.
-movies = spark.sql("select * from movies_metadata_csv")
-
-```
-
-We will then display the contents of our dataframe
-
-```
-#this displays the dataframe
-display(movies)
+#this displays schema of the dataframe
+movies.printSchema())
 
 ```
 
-The entire cell should look like:
-![image](img/azure18.png)
+In order to view the content of our dataframe we need to convert it into Pandas. Pandas is another Python package such as Pyspark. The reason we are converting it to Pandas, is purely because it results in a nicer looking table view just in this case.
 
-Lets run this to view the result. On the top right corner of your cell, you should see a play button. This will execute the code within this cell. Press play and run cell.
+To do this, add the following to a new cell. We also add a limit of 10 rows to display. You can increase or decrease this number if you like.
 
-Note: It may complain or not show if you dont have a cluster. To connect your cluster you created earlier, in the top left, you will note a "Detached" button. Click this and select your cluster. Wait until its green, then press play.
+```
+movies.limit(10).toPandas()
+```
 
-Once complete, you'll see a table which displays the dataframe. If you want to download this, you can click the highlighted drop down. (However we havent done anything with the dataframe yet, so this would be pointless at this moment).
+Once run it should look similar to:
+![image](img/azurenotebooks/azure14.png)
 
-![image](img/azure19.PNG)
+You can also find out the number of rows in your dataframe by running the following
 
-## 6. Transformations
+```
+movies.count()
+```
+
+
+## 7. Transformations
 
 Transformations can be a variety of operations. For the assessment, we would like you to use three or more types of transformations. We will be covering five in this example.
 
@@ -183,7 +197,7 @@ After doing this process, what we want to end up with is three tables:
 #### Filtering:
 
 ```
-#Remove any non numberical runtimes
+#Remove any non numerical runtimes
 movies = movies.filter("runtime !=''")
 
 #Remove any non numerical popularities
@@ -241,53 +255,7 @@ Here we are cleaning our date to an actual date type to maintain consistency.
 movies = movies.withColumn('release_date', movies["release_date"].cast(DateType()))
 ```
 
-After these transformations, your notebook cell should look like:
-
-```
-from pyspark.sql.functions import * 
-from pyspark.sql.types import *
-
-def is_digit(value):
-    if value:
-        return value.isdigit()
-    else:
-        return False
-
-is_digit_udf = udf(is_digit, BooleanType())
-
-# Read in the movie table.
-movies = spark.sql("select * from movies_metadata_csv")
-
-#Remove any non numerical runtimes
-movies = movies.filter("runtime !=''")
-
-#Remove any non numerical popularity's
-movies = movies.filter("popularity !=''")
-
-# Remove any movies with no revenue
-movies = movies.withColumn("revenue", when(is_digit_udf(movies['revenue']), movies['revenue'])).filter("revenue != '0'")
-
-# Remove any movies with no budget
-movies = movies.withColumn("budget", when(is_digit_udf(movies['budget']), movies['budget'])).filter("budget != '0'")
-
-#Remove any non numerical ids
-movies = movies.withColumn("id", when(is_digit_udf(movies['id']), movies['id'])).filter("id !=''")
-
-# Convert the string to datetime
-movies = movies.withColumn('release_date', movies["release_date"].cast(DateType()))
-
-# Convert Budget from USD to NZD
-movies = movies.withColumn('revenue_nzd', movies["revenue"].cast("float") * 1.46964)
-
-# Convert Revenue from USD to NZD
-movies = movies.withColumn('budget_nzd', movies["budget"].cast("float") * 1.46964)
-
-#this displays the dataframe
-display(movies)
-
-```
-
-Looks good. But lets keep going. We've preped our columns to create our Movies table, but we still need to do some more additional transformations to create our other two tables - MovieType and MovieCompany
+Looks good. But lets keep going. We've preped our columns to create our Movies csv, but we still need to do some more additional transformations to create our other two csvs - MovieType and MovieCompany
 
 #### Splitting
 If you look into the Genre column, you'll note its got json entries in here. What we want to do is explode this json, pull out all the genres for each movie, then create a new table which links movie to all its genres.
@@ -309,13 +277,13 @@ genre = movies\
   .drop("genres_exploded")\
   .select("id", col("genre_name").alias("genres"))
 
-display(genre)
+genre.limit(10).toPandas()
 ```
 
-We have created the dataframe we need to create the MovieType table we need. Saving this as a table is covered in the next section, but while displaying it, we can save this as a csv. Lets do that now as this is a requirement of the assessment (you need to submit csv's of the cleaned tables you will create) To save click the highlight drop down in the below screenshot and select download full results. (Note dont click the icon as it doesnt download the full results.)
+We have created the dataframe we need to create the MovieType table we need. Saving this as a csv is covered in the next section.
 
 Output should look like:
-![image](img/azure20.PNG)
+![image](img/azurenotebooks/azure15.png)
 
 Lets now do the same to create the MovieCompanies dataframe.
 
@@ -329,225 +297,71 @@ companies = movies\
   .drop("companies_exploded")\
   .select("id", col("production_company_name").alias("production_companies"))
 
-display(companies)
+companies.limit(10).toPandas()
 
 ```
 
-As this is also a complete dataframe of the table we want to save, lets save this as well.
+## 8. Create new CSV(s) with the cleaned data
 
+We are almost all done. But there is one more thing we need to do to our data. Dataframes are temporary. We need to save these results to CSV's back into our project, so we can download them and use them in Power BI. Lets do this now.
 
-## 7. Create new table(s) with the cleaned data
-
-We are almost all done. But there is one more thing we need to do to our data. Dataframes are temporary. We need to save these results to a table back into our Databricks workspace. Lets do this now.
-
-Update this code:
+In a new cell add the following and run.
 ```
-# Explode the column, get what we need and save this to a new dataframe
-genre = movies\
-  .withColumn("genres_exploded", explode(from_json("genres", genres_schema)))\
-  .withColumn("genre_name", col("genres_exploded.name"))\
-  .drop("genres_exploded")\
-  .select("id", col("genre_name").alias("genres"))
+genre.coalesce(1).write.csv('movieType.csv',header = 'true')
 ```
 
-with
+What this does, is it gets the genre dataframe we created earlier, and writes it to a csv, including our column headers. The .coalesce(1) ensures that we only end up with a single csv file (without this you may get 1 or more csv's which you would then need to combine)
+
+This csv will be living in our project, which we can later download.
+
+
+We also need to save the cleaned movie companies dataframe. The code is similar, but we change it to use the comapanies dataframe we created earlier and we ensure to select a different name. Add the following and run.
 
 ```
-genre = movies\
-  .withColumn("genres_exploded", explode(from_json("genres", genres_schema)))\
-  .withColumn("genre_name", col("genres_exploded.name"))\
-  .drop("genres_exploded")\
-  .select("id", col("genre_name").alias("genres"))\
-  .write.mode("overwrite").saveAsTable("movietype")
-
+companies.coalesce(1).write.csv('movieCompany.csv',header = 'true')
 ```
 
-Note we have added an extra line!
+Awesome, so these two cells will create our two genre and company csv's. But there is one last csv we need to also create. This is our movie dataframe, with our transformed data.
 
-What this does is writes the dataframe as a table named "movietype". Mode is in overwrite, so will overwrite any existing tables with this dataframe.
 
-Lets do the same for movie companies.
-
-Change this code:
-```
-companies = movies\
-  .withColumn("companies_exploded", explode(from_json("production_companies", companies_schema)))\
-  .withColumn("production_company_name", col("companies_exploded.name"))\
-  .drop("companies_exploded")\
-  .select("id", col("production_company_name").alias("production_companies"))
+First lets pick and display the columns we want to use in Power BI (we already decided this in earlier steps, which is why we cleaned the columns we did). The following selects the specific columns in our movies dataframe and displays it.
 
 ```
-
-with:
-```
-companies = movies\
-  .withColumn("companies_exploded", explode(from_json("production_companies", companies_schema)))\
-  .withColumn("production_company_name", col("companies_exploded.name"))\
-  .drop("companies_exploded")\
-  .select("id", col("production_company_name").alias("production_companies"))\
-  .write.mode("overwrite").saveAsTable("movieCompany")
+movies.select("id", "title", "budget_nzd" , "revenue_nzd", "popularity", "runtime").limit(10).toPandas()
 ```
 
-Awesome, so these two updates will create our two genre and company tables. But there is one last table we need to also create. This is our movie table, with our transformed data.
+By running the above cell we can view what our csv will look like.
 
-Firstly - remember the assessment requirements - we need to save all our tables to csv. We have done this already for genre and companies, but not for our movie table. So lets first do this.
-
-Add the following code. This selects the specific columns in our movies dataframe and displays it.
-
-```
-display(movies.select("id", "title", "budget_nzd" , "revenue_nzd", "popularity", "runtime"))
-```
-
-Run the code and download the full results.
-
-Awesome, now lets save this dataframe to a table. To do this add the following code:
+Awesome, now lets save this dataframe to a csv. To do this add the following code:
 
 ```
 movies\
 .select("id", "title", "budget_nzd" , "revenue_nzd", "popularity", "runtime")\
-.write.mode("overwrite").saveAsTable("movies")
+.coalesce(1).write.csv('movies.csv',header = 'true')
 
 ```
 
 Run the cell. 
 
-Woo hoo! Hopefully all the tables have been created. But how do we know? Easy, click the data menu on the left, if everything has gone well, you should be shown 4 tables under the default database.
+Woo hoo! Hopefully all the csvs have been created.
 
-![image](img/azure21.PNG)
+## 9. Download the CSVs
 
-Final Complete code:
-```
-from pyspark.sql.functions import * 
-from pyspark.sql.types import *
+So how do we download the created CSV's? Easy, click the File menu on the top left (when youre in the notebook), and select download. Now click on project and then select the three csv files. (These are actually folders which contain the csv inside which you will need to rename). 
 
-def is_digit(value):
-    if value:
-        return value.isdigit()
-    else:
-        return False
+![image](img/azurenotebooks/azure16.png)
 
-is_digit_udf = udf(is_digit, BooleanType())
+![image](img/azurenotebooks/azure17.png)
 
-# Read in the movie table.
-movies = spark.sql("select * from movies_metadata_csv")
+![image](img/azurenotebooks/azure18.png)
 
-#Remove any non numberical runtimes
-movies = movies.filter("runtime !=''")
 
-#Remove any non numerical popularities
-movies = movies.filter("popularity !=''")
+You can also download them from the project view too. 
 
-# Remove any movies with no revenue
-movies = movies.withColumn("revenue", when(is_digit_udf(movies['revenue']), movies['revenue'])).filter("revenue != '0'")
+### Completed demo project
+You can find the notebook with all the code and cells in [this link](https://msaphase12019bigdata-khodamsp.notebooks.azure.com/j/notebooks/movies.ipynb)
 
-# Remove any movies with no budget
-movies = movies.withColumn("budget", when(is_digit_udf(movies['budget']), movies['budget'])).filter("budget != '0'")
+The project link is [this](https://notebooks.azure.com/khoda-msp/projects/msa-phase1-2019-big-data)
 
-#Remove any non numberical ids
-movies = movies.withColumn("id", when(is_digit_udf(movies['id']), movies['id'])).filter("id !=''")
-
-# Convert the string to datetime
-movies = movies.withColumn('release_date', movies["release_date"].cast(DateType()))
-
-# Convert Budget from USD to NZD
-movies = movies.withColumn('revenue_nzd', movies["revenue"].cast("float") * 1.46964)
-
-# Convert Revenue from USD to NZD
-movies = movies.withColumn('budget_nzd', movies["budget"].cast("float") * 1.46964)
-
-display(movies)
-
-# Create a table which maps genres to movies
-genres_schema = ArrayType(StructType([StructField("id", LongType()),StructField("name", StringType())]))
-
-# Explode the column, get what we need and save this to a new dataframe
-genre = movies\
-  .withColumn("genres_exploded", explode(from_json("genres", genres_schema)))\
-  .withColumn("genre_name", col("genres_exploded.name"))\
-  .drop("genres_exploded")\
-  .select("id", col("genre_name").alias("genres"))\
-  .write.mode("overwrite").saveAsTable("movietype")
-
-display(genre)
-
-# Create a table which maps production companies to movies
-companies_schema = ArrayType(StructType([StructField("id", LongType()),StructField("name", StringType())]))
-
-companies = movies\
-  .withColumn("companies_exploded", explode(from_json("production_companies", companies_schema)))\
-  .withColumn("production_company_name", col("companies_exploded.name"))\
-  .drop("companies_exploded")\
-  .select("id", col("production_company_name").alias("production_companies"))\
-  .write.mode("overwrite").saveAsTable("movieCompany")
-
-display(companies)
-
-display(movies.select("id", "title", "budget_nzd" , "revenue_nzd", "popularity", "runtime"))
-
-movies\
-.select("id", "title", "budget_nzd" , "revenue_nzd", "popularity", "runtime")\
-.write.mode("overwrite").saveAsTable("movies")
-```
-
-## 8. Setup/get config to connect to Power BI
-
-So we've done everything we need to do to our data. Now we need to get some items from our databricks workspace so we can use these in Power BI to connect to our tables.
-
-On the top right, you'll notice a person icon. Click it and select user settings.
-![image](img/azure22.PNG)
-
-You'll be taken to the tab which mentions Access Token. Click Generate New Token.
-
-![image](img/azure23.PNG)
-
-Name it PowerBI and press generate. You will be given a key. Copy this key down and save it to a text file somewhere on your local computer as you will need this in part 2 and you wont be able to access or view this key after this moment. Press done.
-
-Now we need to get a server url. Click on clusters on the left menu and select your cluster. Click advanced options (highlighted)
-
-![image](img/azure24.PNG)
-
-Then select JDBC/ODBC
-
-![image](img/azure25.PNG)
-
-Scroll down to the JDBC URL text box and copy the highlighted. Copy this to a text file.
-![image](img/azure26.PNG)
-
-Then add https: to the start of it. It should look something like (based on above screenshot):
-
-```
-https://australiaeast.azuredatabricks.net:443/sql/protocolv1/o/1545214557707270/0413-072247-sail479
-```
-
-In part 2 we will go through how to use these two values to connect to your databricks workspace via Power BI.
-
-## 9. Clean up / Deleting the Resource Group / Do this before closing your web browser!!
-
-Its good to delete your databricks service when you wont be using it to prevent being charged unnecessarily. Note if you want to access your tables in PowerBI, you will need to have the service present, so make sure to recreate it when you do the PowerBI bit and delete it again after. 
-
-**Before you do this, make sure you copy all the text from your notebook cell to a local text file, so that you can copy paste it next time you re create your service!!!!**
-
-Go back to your tab which has the Azure Portal Open (or open another tab and go to [azure](portal.azure.com))
-
-In the top search bar, enter in the name of your resource group.
-
-![image](img/azure27.PNG)
-
-Click on the entry under Resource Groups (as highlighted).
-
-![image](img/azure28.PNG)
-
-Click the Delete resource group button.
-
-![image](img/azure29.PNG)
-
-Enter in the name of the resource group and click delete.
-
-![image](img/azure30.PNG)
-
-It should start to delete. This will take some time, to be sure its deleting, click the bell on the top right and you should see a notification that its deleting.
-
-![image](img/azure31.PNG)
-
-### To continue your work next time:
-You'll need to do steps: 1, 2, 3, 4, (and 8 if you want to connect to PowerBI this time). Then paste in the text you saved from your last notebook from the text file on your computer. Finally to redo step 9 and delete the resource group once your done again.
+###To continue your work next time:
+If you stop working on your notebook and log out, next time when you come back to your notebook, you will need to rerun each of the cells. This is because it runs in memory and the memory will be cleared. You wont need to reupload your raw dataset if you have saved it in your project as per the steps in this tutorial.
