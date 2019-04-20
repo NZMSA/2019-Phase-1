@@ -363,5 +363,5 @@ You can find the notebook with all the code and cells in [this link](https://msa
 
 The project link is [this](https://notebooks.azure.com/khoda-msp/projects/msa-phase1-2019-big-data)
 
-###To continue your work next time:
+### To continue your work next time:
 If you stop working on your notebook and log out, next time when you come back to your notebook, you will need to rerun each of the cells. This is because it runs in memory and the memory will be cleared. You wont need to reupload your raw dataset if you have saved it in your project as per the steps in this tutorial.
