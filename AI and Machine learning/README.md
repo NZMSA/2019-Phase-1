@@ -76,7 +76,7 @@ Now you've gotten your Azure Notebook ready, we can look for some data to analys
 For your assignment, you will need to perform a similar analysis on another dataset like the one in the video / the notebook linked above.
 Complete the following checklist:
 
-- Complete the "intro-to-ml-with-python" exercise on the Microsoft Learn Platform https://docs.microsoft.com/en-gb/learn/paths/intro-to-ml-with-python/
+- Complete the "intro-to-ml-with-python" exercises on the Microsoft Learn Platform https://docs.microsoft.com/en-gb/learn/paths/intro-to-ml-with-python/
 - Create an Azure notebook (here: https://notebooks.azure.com/)
 - Find another dataset (not the one used in this video) [There are some good ones here: https://archive.ics.uci.edu/ml/datasets.php]
 - Clean it (remove bad data)
