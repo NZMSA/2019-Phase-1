@@ -147,6 +147,8 @@ Create a web application utilizing any of the Cognitive Service APIs. The app mu
 
 <b>Screenshots</b>
 
+_Screenshot should shows your Microsoft Learn username._
+
 1. [Identify faces with the Computer vision API module](https://docs.microsoft.com/en-us/learn/modules/identify-faces-with-computer-vision/)
 
 Example
