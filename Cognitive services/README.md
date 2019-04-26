@@ -6,7 +6,7 @@
 Introduction
 ============
 
-<b>Welcome all!!</b> Whether you are new to programming or a returning veteren, I hope you are exited to learn how you can utilize the power of <b>Microsoft Cognitive services</b> to enhance your web application!
+<b>Welcome all!!</b> Whether you are new to programming or a returning veteren, I hope you are excited to learn how you can utilize the power of <b>Microsoft Cognitive services</b> to enhance your web application!
 
 #### *Cognitive Services, what's that?* 
 
@@ -25,11 +25,11 @@ alt="Seeing AI Project YouTube Video" width="300" border="10" /></p></a>
 
 ## So what am I getting out of this guide?
 
-If you have read 'til this point I'm glad you are interested! In this module of **MSA 2019**, we will be making a simple React JS web application in form of **'Try not to laugh challenge the game'** *(if you have not heard of this challenge just google it 😛)*. 
+If you have read to this point I'm glad you are interested! In this module of **MSA 2019**, we will be making a simple React JS web application in form of **'Try not to laugh challenge the game'** *(if you have not heard of this challenge just google it 😛)*. 
 
 Your app will utilize the power of **Vision API** *(Face)* in order to detect and response to player's emotion in **real time!!**
 
-So, basically not only you will learn about building a basic web application in **React JS** *(Which is really popular right now)* and implementing AI capabilities into your web app, you will finish this module with a fully functional web application you can show off to your mates or employers. 👍
+So, basically not only you will learn about building a basic web application in **React JS** *(Which is really popular right now)* and implementing AI capabilities into your web app, you will finish this module with a fully functional web application you can show off to your mates and employers. 👍
 
 <p align="center"><img src="images/demo.gif"/></p>
 
@@ -51,7 +51,7 @@ Keep in mind that for the purpose of keeping this guide simple and straight forw
 
 It is required that you further study the area where you find yourself lack understanding. As per usual, use [MSA Facebook group](https://www.facebook.com/groups/msaccelerator/) to ask questions, reach out to MSPs, friends but remember to Google for answers first. 😊 
 
-**However skills in following domain will helps**
+**However skills in following domains will help**
 
 **1. Basic programming (JavaScript).**
 
@@ -88,6 +88,18 @@ It is required that you further study the area where you find yourself lack unde
 </p>
 </details>
 
+</details>
+
+**4. Cognitive Service Face API.**
+
+<details><summary>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 💡 Need a starting point? [Click Here]</summary>
+<p>
+  
+  - [Identify faces with the Computer vision API module](https://docs.microsoft.com/en-us/learn/modules/identify-faces-with-computer-vision/)
+  
+</p>
+</details>
+
 ## Getting Started
 
 Before we get started you will need to equip yourself with the right tools, follow the remaining instruction below to setup your developmnet environment. 
@@ -119,7 +131,7 @@ Before we get started you will need to equip yourself with the right tools, foll
 
 Now that you have your environment setup and ready to go. Read a bit about the submission criteria below to familiarize yourself with what to expect for MSA Phase 1. 
 
-## Submission Criteria
+## Submission Criteria 📝
 
 The following are the submission requirements from this Cognitive Services moduel.
 
@@ -131,12 +143,17 @@ Create a web application utilizing any of the Cognitive Service APIs. The app mu
 
 1. Link to your deployed web application on Azure.
 2. Link to your GitHub repository. (Make sure the repo is public)
-3. Screenshot of your profile showing 
-- [Complete faces with computer vision module](https://docs.microsoft.com/en-us/learn/modules/identify-faces-with-computer-vision/)
+3. Screenshot of your profile showing complete modules from Microsoft Learn platform (Include screenshots in your GitHub repo).
+
+<b>Screenshots</b>
+
+1. [Identify faces with the Computer vision API module](https://docs.microsoft.com/en-us/learn/modules/identify-faces-with-computer-vision/)
+
+Example
 
 <img src="images/microsoft-learn.PNG"  width="400"/>
 
-- 1 another complete module relevant to cognitive services from Microsoft Learn platform.
+2. 1 another module from Microsoft Learn platform that helps you build your app.
 
 Suggestion: [Microsoft Learn: Cognitive Services](https://docs.microsoft.com/en-us/learn/browse/?term=cognitive%20services)
 
@@ -144,9 +161,9 @@ Suggestion: [Microsoft Learn: Cognitive Services](https://docs.microsoft.com/en-
 
 You are ready to go. Dig in and start coding! Simply follow the 2 parts tutorial in this guide.
 
-#### Part 1 - **1. Implementing Video Player.**
+#### [Part 1 - **Implementing Video Player.**](/Cognitive%20services/1.%20Implementing%20Video%20Player)
 
-#### Part 2 - **2. Implementing Real-time Emotion Analysis**
+#### [Part 2 - **Implementing Real-time Emotion Analysis**](/Cognitive%20services/2.%20Implementing%20a%20Real-time%20Emotion%20Analysis)
 
 **Good luck and have fun!**
 
