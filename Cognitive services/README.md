@@ -149,13 +149,13 @@ Create a web application utilizing any of the Cognitive Service APIs. The app mu
 
 _Screenshot should shows your Microsoft Learn username._
 
-1. [Identify faces with the Computer vision API module](https://docs.microsoft.com/en-us/learn/modules/identify-faces-with-computer-vision/)
+4. [Identify faces with the Computer vision API module](https://docs.microsoft.com/en-us/learn/modules/identify-faces-with-computer-vision/)
 
 Example
 
-<img src="images/microsoft-learn.PNG"  width="400"/>
+<img src="images/microsoft-learn.PNG"  width="600"/>
 
-2. 1 another module from Microsoft Learn platform that helps you build your app.
+5. 1 another module from Microsoft Learn platform that helps you build your app.
 
 Suggestion: [Microsoft Learn: Cognitive Services](https://docs.microsoft.com/en-us/learn/browse/?term=cognitive%20services)
 
