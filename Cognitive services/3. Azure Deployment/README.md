@@ -24,7 +24,7 @@ In this quick guide, we will be looking at deploying and hosting our web app usi
 
 <img src="img/4.png" width="500" alt="Deployment Complete.">
 
-4. Congigure deployment center.
+4. Configure the deployment center.
 
 * Once done, headover to the web app, in the deployment center choose **GitHub**.
 
