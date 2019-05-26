@@ -44,3 +44,5 @@ This will take sometime so sit back and relax for awhile.
 
 5. Navigate back to **Overview** and click on your website **URL**.
 
+### Congratulation, your website is live! 😃
+
