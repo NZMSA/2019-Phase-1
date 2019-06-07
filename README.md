@@ -17,7 +17,12 @@ It is in your best interest to watch as many videos and upskill as much as you c
 
 These videos will be uploaded to our [YouTube](https://www.youtube.com/channel/UCCegNuS_AZjK-P3ZMN3JXNw) channel - Subscribe and turn on the notification bell to keep up to date. 
 
-You will be notified via email about how to submit, deadline confirmation and when the videos are uploaded ([Register here](https://bit.ly/2UgEqav) for communications) and like our [Facebook page](https://www.aka.ms/nzmsa) to stay up to date.
+## Submission for Phase 1 Due: Sunday 7th July at 11.59pm
+Please read through the criteria on the respective GitHub documentation prior to submitting to ensure you have covered off everything. If your repository is private please add the username: msaccelerate as a collaborator.
+ 
+Submission form: [https://aka.ms/msasubp1](https://aka.ms/msasubp1)
+
+[Register here](https://bit.ly/2UgEqav) for communications and like our [Facebook page](https://www.aka.ms/nzmsa) to stay up to date.
 
 Sign up for Microsoft Azure for Students [(Documentation can be found here)](https://github.com/NZMSA/2019-Phase-1/tree/master/Azure%20For%20Students). Get $100 credit when you create your free account. There is no credit card needed and 12 months of free Azure services. Find out more information [here](https://azure.microsoft.com/en-us/free/students/)
 
