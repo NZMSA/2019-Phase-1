@@ -52,8 +52,7 @@ In phase 1 we will only focus on creating one table, keep an eye out on phase 2 
  
  In this example, we would like to store some details of the student. Ask yourself, what basic information would we need to store from a student?
 
- We will be storing the following information, feel free to add/delete attributes as you see fit. **You are required to add at least one attribute in order to pass this assignment**
-
+ We will be storing the following information, feel free to add/delete attributes as you see fit. **You are required to add at least one more attribute in addition to the attributes listed below in order to pass this assignment**
  * Id
  * First Name
  * Last Name
@@ -118,7 +117,7 @@ Make sure you have an active subscription, navigate to https://portal.azure.com 
   
   Remember your database admin login and password? Pop those in.
 
-  We are now going to use a standard SQL statement to create a new table (notice how similar this SQL statement is compared to the design we did on dbDiagram?) **Again, You are required to add at least one attribute in order to pass this assignment**:
+  We are now going to use a standard SQL statement to create a new table (notice how similar this SQL statement is compared to the design we did on dbDiagram?) **Again, You are required to add at least one more attribute in addition to the attributes listed below in order to pass this assignment**:
   ```
     CREATE TABLE [students]
     (
