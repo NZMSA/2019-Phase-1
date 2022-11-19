@@ -10,7 +10,7 @@
     "react-draggable": "^3.2.1",
     "react-player": "^1.10.0",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "2.1.8",
+    "react-scripts": "5.0.1",
     "react-webcam": "^1.1.1",
     "redux": "^4.0.1",
     "video-react": "^0.13.6"
